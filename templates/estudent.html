@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(63, 66, 68);">
+    <div style="margin: 0 auto;
+                text-align: center;
+                width: 70px;
+                height: 20px;
+                background-color: white;
+                border-radius: 15%;
+                ">
+        <a href="http://127.0.0.1:8000/" style="text-decoration: none;
+                    color: black;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Главная</a>
+    </div>
+
+    <form action="" method="post" style="width: 500px; margin:  0 auto;">
+        {% csrf_token %}
+        <div style="margin-top: 50px;">
+            <label for="name" class="form-label">Имя ученика</label>
+            <input name="name" type="text" id="name">
+        </div>
+        <div>
+            <label for="surname" class="form-label">Фамилия ученика</label>
+            <input name="surname" type="text" id="surname">
+        </div>
+        <div>
+            <label for="age" class="form-label">Возраст ученика</label>
+            <input name="age" type="number" id="age">
+        </div>
+        <div>
+            <label for="course" class="form-label">Курс</label>
+            <input name="course" type="text" id="course">
+        </div>
+        <div>
+            <label for="instrument" class="form-label">Инструмент</label>
+            <select v-model="selected" name="instrument" id="instrument">
+                <option disabled value="">Выберите один</option>
+                <option>Гитара</option>
+                <option>Скрипка</option>
+                <option>Пианино</option>
+                <option>Барабан</option>
+            </select>
+            <!-- <input name="status" type="text"id="status"> -->
+        </div>
+        <div>
+            <label for="progress" class="form-label">Успеваемость</label>
+            <input name="progress" type="number" id="progress">
+        </div>
+        <div>
+            <label for="payment" class="form-label">Инструмент</label>
+            <select v-model="selected" name="payment" id="payment">
+                <option disabled value="">Выберите один</option>
+                <option>Оплачено</option>
+                <option>Не оплачено</option>
+            </select>
+        </div>
+
+        <button name="add_button" type="submit" class="btn btn-primary" style="margin-top: 20px;">Изменить
+            ученика</button>
+    </form>
+</body>
+
+</html>
