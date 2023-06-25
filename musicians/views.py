@@ -34,6 +34,7 @@ def new_student(request):
 def edit_student(request, student_id):
     student = get_object_or_404(Student, pk=student_id)
 
+    context = {'student': Student.objects.get(pk=student_id)}
     if request.method == 'POST':
         name = request.POST.get('name')
         surname = request.POST.get('surname')
@@ -55,4 +56,4 @@ def edit_student(request, student_id):
         student.save() 
     
 
-    return render(request, 'estudent.html')
+    return render(request, 'estudent.html', context=context)

@@ -24,19 +24,19 @@
         {% csrf_token %}
         <div style="margin-top: 50px;">
             <label for="name" class="form-label">Имя ученика</label>
-            <input name="name" type="text" id="name">
+            <input name="name" type="text" id="name" placeholder="{{ student.name }}">
         </div>
         <div>
             <label for="surname" class="form-label">Фамилия ученика</label>
-            <input name="surname" type="text" id="surname">
+            <input name="surname" type="text" id="surname" placeholder="{{ student.surname }}">
         </div>
         <div>
             <label for="age" class="form-label">Возраст ученика</label>
-            <input name="age" type="number" id="age">
+            <input name="age" type="number" id="age" placeholder="{{ student.age }}">
         </div>
         <div>
             <label for="course" class="form-label">Курс</label>
-            <input name="course" type="text" id="course">
+            <input name="course" type="text" id="course" placeholder="{{ student.course }}">
         </div>
         <div>
             <label for="instrument" class="form-label">Инструмент</label>
@@ -51,7 +51,7 @@
         </div>
         <div>
             <label for="progress" class="form-label">Успеваемость</label>
-            <input name="progress" type="number" id="progress">
+            <input name="progress" type="number" id="progress" placeholder="{{ student.progress}}">
         </div>
         <div>
             <label for="payment" class="form-label">Инструмент</label>
